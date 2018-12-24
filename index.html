@@ -131,9 +131,12 @@
            if(document.getElementById("length").value < 100){
                var length= document.getElementById("length").value;
                if (length <=0 || islength(str)){
-                  
+                    window.alert("length");
+                   alert("Length out of range!")
                    document.getElementById("total").innerHTML = 0;
+                
                }
+               
                else{
                var total = 16.30 + length * paperCost;
                document.getElementById("total").innerHTML = total;
@@ -152,7 +155,7 @@
 
 <!-- Third Container (Grid) -->
 <div class="container-fluid bg-3 text-center">    
-  <h3 class="margin">The Commons</h3><br>
+  <h3 class="margin"></h3><br>
   <div class="row">
     <div class="col-sm-4">
       <p><br></p>
