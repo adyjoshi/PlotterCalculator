@@ -3,6 +3,7 @@
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
   <title>Plotter Calculator</title>
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -78,6 +79,7 @@
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
   <h3 class="margin">The Plotter Calculator</h3>
+  <img class="alignleft wp-image-310" src="http://thecommons.mun.ca/wp-content/uploads/DMC-Logo-Metal1.png" alt="DMC-Logo---Metal" width="250" >
 
 </div>
     <div class="container-fluid bg-3 text-center"> 
@@ -113,11 +115,12 @@
         
         </strong>
        <form>
-           <h1><br>Select the paper type: </h1>
+           <h3><br>Select the paper type: </h3>
               <input type="radio" name="papertype" id="matte" checked> Matte<br>
               <input type="radio" name="papertype" id="glossy"> Glossy<br>
-              <h1>Enter the length in Feet : </h1>
-              Length <input type="number" id="length"><br>
+              <h3>Enter the length in Feet : </h3>
+              Length <input type="number" id="length">
+              <br>
 
        </form>
        <b> Total: </b>
@@ -138,9 +141,11 @@
            }                  
 
            if(document.getElementById("length").value < 100){
+            
                var length= document.getElementById("length").value;
+            
                var total = 16.30 + length * paperCost;
-               document.getElementById("total").innerHTML = total;
+               document.getElementById("total").innerHTML = total.toFixed(2);
            }             
        }
        
@@ -152,24 +157,27 @@
 </div>
 
 <!-- Third Container (Grid) -->
-<div class="container-fluid bg-3 text-center">    
-  <h3 class="margin">The Commons</h3><br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p><br></p>
-      <img class="alignleft wp-image-310" src="http://thecommons.mun.ca/wp-content/uploads/DMC-21.jpg" alt="DMC-2" width="250" height="232">
+
+  <!--
+ <div class="container-fluid bg-3 text-center">    
+
+    <div class="row">
+        <div class="col-sm-4">
+        <p><br></p>
+        <img class="alignleft wp-image-310" src="http://thecommons.mun.ca/wp-content/uploads/DMC-21.jpg" alt="DMC-2" width="250" height="232">
     </div>
     <div class="col-sm-4"> 
-   <p><br></p>
+<p><br></p>
 <img class="aligncenter wp-image-310" src="http://thecommons.mun.ca/wp-content/uploads/DMC-Logo-Metal1.png" alt="DMC-Logo---Metal" width="250" >
     </div>
     <div class="col-sm-4"> 
-      <p><br></p>
+    <p><br></p>
 <img class="logo-image" src="http://thecommons.mun.ca/wp-content/uploads/Logo-BLK-Regular.png" alt="Logo">
     </div>
-  </div>
 </div>
-
+</div>
+-->
+  
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
   <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
