@@ -3,7 +3,6 @@
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
   <title>Plotter Calculator</title>
-  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -16,7 +15,6 @@
       line-height: 1.8;
       color: #f5f6f7;
   }
-  
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
   .bg-1 { 
@@ -68,7 +66,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-        <!--<a class="navbar-brand" href="#"><strong>The Commons MUN</strong></a>>-->
+      <a class="navbar-brand" href="#"><strong>The Commons MUN</strong></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -79,12 +77,12 @@
 
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
-        <img class="alignleft wp-image-310" src="http://thecommons.mun.ca/wp-content/uploads/DMC-Logo-Metal1.png" alt="DMC-Logo---Metal" width="250" >
-  <h1 class="margin">The Plotter Calculator</h1>
+  <h3 class="margin">The Plotter Calculator</h3>
 
 </div>
     <div class="container-fluid bg-3 text-center"> 
-<table>
+        
+<!--<table>
            <tr>
                <td>Paper</td>
                <td>Matte</td>
@@ -100,18 +98,29 @@
                <td>36 inch</td>
                <td> 42 inch</td>
            </tr>
-           
-           
-       </table>
-      
+
+       </table> -->
+      <strong>
+          The cost breakdown is : 
+          <br>
+          Total = (Price x length) + labour charges
+          
+          The price varies for Matte and Glossy paper type: <br>
+
+          - Matte ($5.26) per feet <br>
+          - Glossy ($7.44) per feet
+
+        
+        </strong>
        <form>
+           <h1><br>Select the paper type: </h1>
               <input type="radio" name="papertype" id="matte" checked> Matte<br>
               <input type="radio" name="papertype" id="glossy"> Glossy<br>
-          
-              Length<input type="number" id="length"><br>
+              <h1>Enter the length in Feet : </h1>
+              Length <input type="number" id="length"><br>
 
        </form>
-       <p> Total: </p>
+       <b> Total: </b>
        <p id="total"></p>
        <button onclick="calculate()">Calculate!</button>
 
@@ -130,51 +139,41 @@
 
            if(document.getElementById("length").value < 100){
                var length= document.getElementById("length").value;
-               if (length <=0 || islength(str)){
-                   document.getElementById("total").innerHTML = 0;
-                }
-               
-               else{
                var total = 16.30 + length * paperCost;
                document.getElementById("total").innerHTML = total;
-            }
-
            }             
        }
        
    </script>
     </div>
 <!-- Second Container -->
-
 <div class="container-fluid bg-2 text-center">
 
 </div>
 
 <!-- Third Container (Grid) -->
 <div class="container-fluid bg-3 text-center">    
-  <h3 class="margin"></h3><br>
+  <h3 class="margin">The Commons</h3><br>
   <div class="row">
     <div class="col-sm-4">
       <p><br></p>
-    
+      <img class="alignleft wp-image-310" src="http://thecommons.mun.ca/wp-content/uploads/DMC-21.jpg" alt="DMC-2" width="250" height="232">
     </div>
     <div class="col-sm-4"> 
    <p><br></p>
-
+<img class="aligncenter wp-image-310" src="http://thecommons.mun.ca/wp-content/uploads/DMC-Logo-Metal1.png" alt="DMC-Logo---Metal" width="250" >
     </div>
     <div class="col-sm-4"> 
       <p><br></p>
-
+<img class="logo-image" src="http://thecommons.mun.ca/wp-content/uploads/Logo-BLK-Regular.png" alt="Logo">
     </div>
   </div>
 </div>
 
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
-  
-  <img class="logo-image" src="http://thecommons.mun.ca/wp-content/uploads/Logo-BLK-Regular.png" alt="Logo">
-
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
 </footer>
-<p style="color: #1abc9c">Aditi Joshi</p> 
+
 </body>
 </html>
